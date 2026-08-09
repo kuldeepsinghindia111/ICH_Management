@@ -58,7 +58,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="font-display text-xl font-semibold text-foreground">This page didn't load</h1>
         <p className="text-sm text-muted-foreground">Something went wrong. Try again or go home.</p>
         {error?.message && (
-          <div className="mt-2 text-left bg-muted/60 p-3 rounded text-xs font-mono text-rose-600 dark:text-rose-400 break-words max-h-40 overflow-auto border">
+          <div className="mt-2 text-left bg-muted/60 p-3 rounded text-xs font-mono text-rose-600 dark:text-rose-400 wrap-break-word max-h-40 overflow-auto border">
             {error.message}
           </div>
         )}
